@@ -1,73 +1,128 @@
-# Welcome to your Lovable project
+# 📚 BookSphere – Read Beyond Boundaries
 
-## Project info
+**BookSphere** is a modern e-library and virtual e-book showcase platform that empowers readers to discover, access, and engage with books from anywhere in the world. Designed for ease, inclusivity, and interactivity, BookSphere bridges the gap between traditional libraries and the digital reading experience.
 
-**URL**: https://lovable.dev/projects/5824f7ff-627e-4041-9343-f6baf52452d2
+---
 
-## How can I edit this code?
+## 🔗 Live Demo
 
-There are several ways of editing your application.
+🌐 [Visit BookSphere]https://sphere-book-frontend.vercel.app/)  
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5824f7ff-627e-4041-9343-f6baf52452d2) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 💡 Inspiration
 
-**Use your preferred IDE**
+The idea for BookSphere stemmed from a simple question: _What if accessing quality books was as easy and exciting as streaming movies or music?_  
+We aimed to build a centralized platform for readers—especially in rural or underserved areas—to access books digitally in an engaging, inclusive way.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Features
 
-Follow these steps:
+- 📖 Browse, preview, and read e-books online
+- 🔍 Smart search by title, author, or genre
+- 📁 Personalized bookshelf (save your favorites)
+- 🌐 Virtual Book Show (curated expos and new releases)
+- 🧑‍🤝‍🧑 Reading clubs and community discussions
+- 📤 Admin dashboard to upload and manage books
+- 🔐 Secure login/signup with JWT authentication
+- 📱 Mobile-friendly responsive design
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## ⚙️ Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
+### Frontend:
+- React.js
 - Tailwind CSS
 
-## How can I deploy this project?
+### Backend:
+- Node.js + Express.js
+- MongoDB (NoSQL)
+- JWT for authentication
 
-Simply open [Lovable](https://lovable.dev/projects/5824f7ff-627e-4041-9343-f6baf52452d2) and click on Share -> Publish.
+### Storage & Hosting:
+- Cloudinary (book covers, PDFs)
+- Vercel (frontend hosting)
+- Render (backend hosting)
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## ☁️ AWS Tools Used
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **AWS Lambda** – Serverless backend logic (uploading books, search queries, bookshelf data)
+- **Amazon API Gateway** – Exposes RESTful APIs to frontend
+- **Amazon S3** – Book storage (alternative to Cloudinary)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+---
+
+## 🧠 How We Used AWS Lambda
+
+BookSphere’s backend functions were modularized using **AWS Lambda**, allowing us to run serverless logic for core operations without managing infrastructure. Lambda functions were triggered through **API Gateway** endpoints like:
+
+- `/search-books` – Processes user input and queries the database
+- `/add-book` – Authenticated admin book upload
+- `/user-library` – Retrieves a user's saved books
+- `/auth/signup` and `/auth/login` – Handles secure JWT-based authentication
+
+By using Lambda, we ensured:
+- Auto-scaling without provisioning servers
+- Faster development and deployment cycles
+- Minimal downtime and reduced backend costs
+
+Logs from AWS CloudWatch helped us debug and optimize these Lambda functions efficiently.
+
+---
+
+## 📸 Demo Screenshots
+
+| Screenshot | What it Shows |
+|------------|----------------|
+| Homepage   | Featured books, clean layout, genre filter |
+| Book Details | Book preview, metadata, "Add to Library" |
+| Admin Panel | Upload form for new books |
+| Search Page | Search/filter in action |
+| Mobile View | Responsive layout across devices |
+
+---
+
+## 🧩 Challenges We Overcame
+
+1. **PDF Rendering:** Ensuring smooth previewing of large PDFs inside browser
+2. **JWT Handling:** Managing secure user sessions
+3. **Search Performance:** Efficient querying and filtering across genres
+4. **Time Constraints:** Prioritizing MVP features during hackathon
+
+---
+
+## 🧠 What We Learned
+
+- Practical usage of AWS Lambda in real-world serverless applications
+- REST API design and integration with MongoDB
+- Secure and scalable file upload & preview handling
+- React state management and component-based design
+
+---
+
+## 🏁 Future Scope
+
+- Real-time reading rooms using WebSockets
+- Integration with text-to-speech (TTS) APIs
+- Partnership with authors/publishers for exclusive releases
+- Multi-language e-books and accessibility tools
+
+---
+
+## 🙌 Team
+
+Made with  by Rimjhim .
+
+---
+
+## ✨ Quote
+
+> “A reader lives a thousand lives before they die.”  
+> BookSphere makes each one count.
+
